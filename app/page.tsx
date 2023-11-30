@@ -1,9 +1,13 @@
-import Masthead from '@/components/masthead'
+'use client'
+import AboutUs from '@/components/Aboutus'
+import Masthead from '@/components/Masthead'
+import ScrollObserver from '@/utils/scroll-observer'
 
 export default function Home() {
 	return (
-		<main>
+		<ScrollObserver>
 			<Masthead />
-		</main>
+			<AboutUs />
+		</ScrollObserver>
 	)
 }

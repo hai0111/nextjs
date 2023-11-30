@@ -1,0 +1,62 @@
+[
+	{
+		"id": "marc",
+		"name": "Marc",
+		"socialId": "@mrousavy",
+		"link": "https://github.com/mrousavy"
+	},
+	{
+		"id": "szymon",
+		"name": "Szymon",
+		"socialId": "@szymon20000",
+		"link": "https://github.com/szymon20000"
+	},
+	{
+		"id": "thomas",
+		"name": "Thomas",
+		"socialId": "@thomas-coldwell",
+		"link": "https://github.com/thomas-coldwell"
+	},
+	{
+		"id": "christoph",
+		"name": "Christoph",
+		"socialId": "@chrispader",
+		"link": "https://github.com/chrispader"
+	},
+	{
+		"id": "hanno",
+		"name": "Hanno",
+		"socialId": "@hannojg",
+		"link": "https://github.com/hannojg"
+	},
+	{
+		"id": "janic",
+		"name": "Janic",
+		"socialId": "@janicduplessis",
+		"link": "https://github.com/janicduplessis"
+	},
+	{
+		"id": "taras",
+		"name": "Taras",
+		"socialId": "@perunt",
+		"link": "https://github.com/perunt"
+	},
+	{
+		"id": "terry",
+		"name": "Terry",
+		"socialId": "@terrysahaidak",
+		"link": "https://github.com/terrysahaidak"
+	},
+	{
+		"id": "eric",
+		"name": "Eric",
+		"socialId": "@ericvicenti",
+		"link": "https://github.com/ericvicenti"
+	},
+	{
+		"id": "viktoria",
+		"name": "Viktoria",
+		"socialId": "@viktoria.psd",
+		"link": "https://www.instagram.com/viktoria.psd"
+	}
+]
