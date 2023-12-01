@@ -2,6 +2,7 @@
 import AboutUs from '@/components/Aboutus'
 import Masthead from '@/components/Masthead'
 import Skills from '@/components/Skills'
+import Works from '@/components/Works'
 import ScrollObserver from '@/utils/scroll-observer'
 
 export default function Home() {
@@ -10,7 +11,8 @@ export default function Home() {
 			<Masthead />
 			<AboutUs />
 			<Skills />
-			<div className="min-h-screen"></div>
+			<Works />
+			<Skills />
 		</ScrollObserver>
 	)
 }

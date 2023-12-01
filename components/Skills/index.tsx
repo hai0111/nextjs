@@ -1,38 +1,26 @@
+import { getActiveChild } from '@/funcs'
 import clsx from 'clsx'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 
 const Skills = () => {
 	const refContainer = useRef<HTMLDivElement>(null)
 	const [activeParagraph, setActiveParagraph] = useState<number>(0)
 	useEffect(() => {
-		const handleScroll: EventListener = () => {
+		const handleScroll = () => {
 			const { current: elContainer } = refContainer
 			if (elContainer) {
-				const { clientHeight } = elContainer
-				const halfH = window.innerHeight / 2
-				const indexs = elContainer.childNodes.length - 1
-				const { y: posY } = elContainer.getBoundingClientRect()
-				const percentY = (-posY + halfH) / clientHeight
-				const activeParagraph = Math.min(
-					Math.max(Math.round(percentY * indexs), 0),
-					indexs
-				)
-				setActiveParagraph(activeParagraph)
+				setActiveParagraph(getActiveChild(elContainer) as number)
 			}
 		}
+		handleScroll()
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
-	const handleScroll: React.UIEventHandler<HTMLElement> = (ev) => {
-		const el = ev.target!
-		console.dir(el)
-	}
 	return (
-		<section className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-10 lg:px-20 py-24 md:py-28 lg:py-36">
+		<section className="min-h-screen bg-black text-white flex flex-col items-center justify-center py-24 md:py-28 lg:py-36">
 			<div
 				ref={refContainer}
-				onScroll={handleScroll}
-				className="max-w-5xl text-4xl md:text-6xl lg:text-7xl tracking-tight font-semibold leading-[1.15]"
+				className="max-w-5xl px-10 lg:px-20 text-4xl md:text-6xl lg:text-7xl tracking-tight font-semibold leading-[1.15]"
 			>
 				<div
 					className={clsx('transition-opacity duration-200', {
