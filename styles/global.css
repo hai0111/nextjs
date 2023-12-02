@@ -33,3 +33,11 @@ body {
 		)
 		rgb(var(--background-start-rgb));
 }
+
+.draggable {
+	cursor: grab;
+}
+
+.draggable.is-dragging {
+	cursor: grabbing;
+}

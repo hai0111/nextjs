@@ -2,17 +2,21 @@
 import AboutUs from '@/components/Aboutus'
 import Masthead from '@/components/Masthead'
 import Skills from '@/components/Skills'
+import TrustedBy from '@/components/TrustedBy'
 import Works from '@/components/Works'
 import ScrollObserver from '@/utils/scroll-observer'
+import SizeObserver from '@/utils/size-observer'
 
 export default function Home() {
 	return (
-		<ScrollObserver>
-			<Masthead />
-			<AboutUs />
-			<Skills />
-			<Works />
-			<Skills />
-		</ScrollObserver>
+		<SizeObserver>
+			<ScrollObserver>
+				<Masthead />
+				<AboutUs />
+				<Skills />
+				<Works />
+				<TrustedBy />
+			</ScrollObserver>
+		</SizeObserver>
 	)
 }
