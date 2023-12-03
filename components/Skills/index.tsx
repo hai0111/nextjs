@@ -2,7 +2,23 @@ import { getActiveChild } from '@/funcs'
 import clsx from 'clsx'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 
-const Skills = () => {
+import useSWR from 'swr'
+import axios, { AxiosResponse } from 'axios'
+
+interface DataFetchingCommit {
+	commits: number
+}
+
+const Skills: React.FC = () => {
+	const { data } = useSWR<AxiosResponse<DataFetchingCommit>>(
+		'/api/stats',
+		axios
+	)
+
+	const numOfCommits = (data?.data.commits || 0)
+		.toString()
+		.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+
 	const refContainer = useRef<HTMLDivElement>(null)
 	const [activeParagraph, setActiveParagraph] = useState<number>(0)
 	useEffect(() => {
@@ -16,6 +32,7 @@ const Skills = () => {
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
+
 	return (
 		<section className="min-h-screen bg-black text-white flex flex-col items-center justify-center py-24 md:py-28 lg:py-36">
 			<div
@@ -36,8 +53,8 @@ const Skills = () => {
 						'opacity-100': activeParagraph === 1,
 					})}
 				>
-					Our team has contributed 310 commits to React Native core, powering
-					thousands of apps worldwide.
+					Our team has contributed {numOfCommits} commits to React Native core,
+					powering thousands of apps worldwide.
 				</div>
 				<div
 					className={clsx('transition-opacity duration-200', {

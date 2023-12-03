@@ -20,7 +20,6 @@ const Contact = () => {
 					maxLength={128}
 					placeholder="Company name"
 					className="bg-black text-white outline-none border-2 border-white rounded-3xl px-8 py-2"
-					value=""
 				/>
 				<input
 					type="email"
@@ -30,7 +29,6 @@ const Contact = () => {
 					maxLength={128}
 					placeholder="Your E-mail"
 					className="bg-black text-white outline-none border-2 border-white rounded-3xl px-8 py-2"
-					value=""
 				/>
 				<textarea
 					id="message"
