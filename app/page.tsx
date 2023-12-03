@@ -1,6 +1,7 @@
 'use client'
 import AboutUs from '@/components/Aboutus'
 import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 import Masthead from '@/components/Masthead'
 import Skills from '@/components/Skills'
 import TrustedBy from '@/components/TrustedBy'
@@ -18,6 +19,7 @@ export default function Home() {
 				<Works />
 				<TrustedBy />
 				<Contact />
+				<Footer />
 			</ScrollObserver>
 		</SizeObserver>
 	)
