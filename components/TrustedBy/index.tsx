@@ -37,6 +37,7 @@ const logosDown: string[] = [
 const TrustedBy = () => {
 	return (
 		<section className="bg-white min-h-screen flex flex-col justify-center gap-16 md:gap-32">
+			<div className="flex-grow-1" />
 			<div>
 				<h3 className="text-xl mb-10 font-bold text-center">
 					trusted by the apps on your phone

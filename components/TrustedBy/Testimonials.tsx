@@ -101,7 +101,7 @@ const Testimonials = () => {
 		<div
 			ref={emblaRef}
 			className={clsx(
-				'w-full bg-black text-white py-10 lg:py-20 overflow-hidden draggable'
+				'w-full bg-black text-white pt-10 lg:pt-20 pb-20 lg:pb-32 overflow-hidden draggable'
 			)}
 		>
 			<div className="flex">
