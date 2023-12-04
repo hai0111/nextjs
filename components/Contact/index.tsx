@@ -1,7 +1,11 @@
+import { useForm } from '@formspree/react'
 import Image from 'next/image'
-import React from 'react'
 
 const Contact = () => {
+	const [state, handleSubmit] = useForm('mqkvvjjo')
+	if (state.succeeded) {
+		return <p>Thanks for joining!</p>
+	}
 	return (
 		<section className="min-h-screen bg-black text-white  pt-10 flex flex-col items-center justify-center">
 			<Image
@@ -11,7 +15,10 @@ const Contact = () => {
 				alt=""
 			/>
 			<h2 className="text-4xl font-bold mt-10">Contact Us</h2>
-			<form className="flex flex-col gap-4 mt-16 px-10 lg:mt-20 min-w-full lg:min-w-[500px]">
+			<form
+				onSubmit={handleSubmit}
+				className="flex flex-col gap-4 mt-16 px-10 lg:mt-20 min-w-full lg:min-w-[500px]"
+			>
 				<input
 					type="text"
 					id="companyName"
