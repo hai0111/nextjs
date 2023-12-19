@@ -15,7 +15,7 @@ export default function Home() {
 			<ScrollObserver>
 				<Masthead />
 				<AboutUs />
-				<Skills commits={331231123} />
+				<Skills />
 				<Works />
 				<TrustedBy />
 				<Contact />
